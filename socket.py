@@ -3,7 +3,7 @@ import socket
 import time
 
 PORT = 4011
-menu = ("For Host press -h-\nFor Client press -c-\nExit press -x-\nYour chice is:")
+menu = ("For Server press -s-\nFor Client press -c-\nExit press -x-\nYour chice is:")
 choice = input(menu)
 while True:
 
@@ -46,7 +46,7 @@ while True:
           # Closing the socket.
           sock_client.close()
           return
-      elif choice == "h":
+      elif choice == "s":
           sock_server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
           sock_server.bind((socket.gethostname(), PORT))
           sock_server.listen(5)
